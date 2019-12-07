@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" type="text/css" href="css/intro-style.css"> -->
+	<link rel="stylesheet" type = "text/css" href="{{ url_for('static', filename='css/intro-style.css') }}"/>
+	<title>Know More About Fake News</title>
+</head>
+<body>
+	<div class="container">
+		<div class="content">
+			<h1>Know More About Fake News</h1>
+			<p>Fake news refers to the news that contains misleading information. Here is a quote from wikipedia[1]：
+				<br>
+				<br>
+
+					”Fake news (also known as junk news, pseudo-news, or hoax news) is a form of news consisting of deliberate disinformation or hoaxes spread via traditional news media (print and broadcast) or online social media. Digital news has brought back and increased the usage of fake news, or yellow journalism. The news is then often reverberated as misinformation in social media but occasionally finds its way to the mainstream media as well.“
+					<br>
+					<br>
+					Nowadays, different types of media forms highly expand people’s horizons. However, fake news becomes a major problem of receiving information from the media. Immerse in a media environment consisting of too much fake news may cause bias and affect ones’ judgment. 
+					<br>
+					<br>
+					This project aims to raise people’s awareness of fake news and improve people’s ability to distinguish fake news. This game consists of 5 sections and the player will be asked to select the real news from one of two news sources. The result will be shown on the final page along with the fake news and real news that was presented in the game.  
+					<br>
+					<br>
+					Reference:
+					<br>
+					<br>
+
+[1] “Fake News.” Wikipedia, Wikimedia Foundation, 1 Dec. 2019, https://en.wikipedia.org/wiki/Fake_news.
+				</p>
+		</div>
+			<div id="submit" style="top: 50%;">
+				<form action="/play" method="POST">
+					<input id="button" type="submit" value="PLAY!">
+				</form>
+			</div>
+		
+		
+		
+		
+	</div>
+	
+</body>
+</html>

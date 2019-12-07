@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" type="text/css" href="css/index-style.css"> -->
+	<link rel="stylesheet" type = "text/css" href="{{ url_for('static', filename='css/index-style1.3.css') }}"/>
+	<title>Know More About Fake News</title>
+</head>
+<body>
+	<h1 class="title">Which one is real?</h1>
+	<!-- <a href="conculsion.html">click</a> -->
+	<form id="tryitout" action="/tryitout" method="POST">
+		
+		<div id = "inputs" style="display: none;">
+			<input type="number" id = "win" name = "win" value = {{win}}>
+			<input type="number" id = "lose" name = "lose" value= {{lose}}>
+			
+			<!-- <div id="win" name = "win">{{win}}</div>
+			<div id="lose" name = "lose">{{lose}}</div> -->
+		</div>
+		<div class="container">
+			<div class="newsone" id = "{{newsoneId}}" onclick="validate(this.id)">
+				<div class="newsone-img" style="background-image: url('{{img1}}');"></div>
+				<div class="newsone-content">
+						<h1>{{title1}}</h1>
+						<p>{{text1}}</p>
+				</div>
+			</div>
+			<div class="newstwo" id = "{{newstwoId}}" onclick="validate(this.id)">
+				<div class="newstwo-img" style="background-image: url('{{img2}}');"></div>
+				<div class="newstwo-content">
+					<h1>{{title2}}</h1>
+					<p>{{text2}}</p>
+				</div>
+			</div>
+			<div class="dict">
+				<div class="dict-content">
+					<h3>Keyword:</h3>
+					<h2>{{word}}</h2>
+					<h4>noun</h4>
+					<p>{{noun}}</p>
+					<h4>verb</h4>
+					<p>{{verb}}</p>
+					<h4>adverb</h4>
+					<p>{{adv}}</p>
+					<h4>adj</h4>
+					<p>{{adj}}</p>
+				</div>
+			</div>
+		</div>
+		
+	</form>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		// function pagejump(){
+		// 	var win = document.getElementById("win").value.length
+		// 	var lose = document.getElementById("lose").value.length
+		// 	if (win + lose > 6){
+		// 		window.location.href = "conculsion.html"
+
+		// 	}
+		// }
+		function validate(clicked_id){
+
+				if(clicked_id == "real"){
+					alert("You are right")
+					document.getElementById("win").value += 1
+				}else{
+					alert("You are wrong")
+					document.getElementById("lose").value += 1
+				}
+
+				document.getElementById("tryitout").submit()	
+		}
+		// pagejump()
+	</script>
+</body>
+</html>

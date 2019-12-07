@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+	<meta charset="utf-8">
+	<!-- <link rel="stylesheet" type="text/css" href="css/conculsion-style.css"> -->
+	<link rel="stylesheet" type = "text/css" href="{{ url_for('static', filename='css/conculsion-style2.3.css') }}"/>
+	<title>Know More About Fake News</title>
+</head>
+<body>
+	<div class="container">
+		<div class="result">
+			<h1 class="right">You got {{win}} right!</h1>
+			<h1 class="right">And {{lose}} wrong!</h1>
+		</div>
+		<h2 id="title">Those are the real news</h2>
+		<div class="real">
+			{% for e in  realList%}
+				<div class="one">
+						<div class="newsone-img" style="background-image: url('{{e['real_news_url']}}');"></div>
+				<div class="newsone-content">
+								<h1 style="font-size: 15px;">{{e['real_news_title']}}</h1>
+								<p>{{e['real_news_text']}}</p>
+						</div>
+					<!-- <h3>{{e['real_news_title']}}</h3> -->
+
+				</div>
+			{% endfor %}
+		</div>
+		<h2 id="title"> Those are the fake news</h2>
+		<div class="fake">
+				{% for e in  fakeList%}
+				<div class="one">
+						<div class="newsone-img" style="background-image: url('{{e['fake_news_url']}}');"></div>
+				<div class="newsone-content">
+								<h1 style="font-size: 15px;">{{e['fake_news_title']}}</h1>
+								<p>{{e['fake_news_text']}}</p>
+						</div>
+					<!-- <h3>{{e['real_news_title']}}</h3> -->
+
+				</div>
+			{% endfor %}
+			
+		</div>
+		
+		
+	</div>
+	
+</body>
+</html>
