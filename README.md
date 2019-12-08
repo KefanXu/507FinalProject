@@ -27,6 +27,12 @@ If they want to build the database from the ground, they can delete the database
     - Here is the link: https://drive.google.com/file/d/1WZLs1B8M4EweqQU9pjYqOYSkEDgZHoPp/view?usp=sharing
 - Then, run `run_flask.py`.
   - This program will run the flask and render the HTML pages so the user can play the game on a web view. 
+  
+## Structure of the code 
+### `final_project.py`
+- `csv_data_preprocessing()`: This function will reprocess the data in the csv file. It will return a list which contains frequent words used in the fake news. This list will later be used to search for real news and get description from dictionary API.
+- `get_data_from_news_api()`: This function will get data from New York Times API. It contains a timer to make sure it sends less than 10 request per minutes. It returns a json dictionary whose data will be later input into the database. 
+- `get_data_from_dic_api()`: This function will get data from Word Dictionary API and return a json dictionary so the data can be later input into the database.
 
 ## Reference 
 [1] “Fake News.” Wikipedia, Wikimedia Foundation, 1 Dec. 2019, https://en.wikipedia.org/wiki/Fake_news.
