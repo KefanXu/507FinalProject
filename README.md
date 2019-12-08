@@ -18,15 +18,24 @@ This project aims to raise peopleâ€™s awareness of fake news and improve peopleâ
 - Word Dictionary by twinword API
   - link: https://rapidapi.com/twinword/api/word-dictionary?endpoint=53aa5089e4b0a798dbd1a61b
   
+## Other information needed to run the program
+
+This repo contains almost all the file needed to run `run_flask.py`(except one large json file on my Google drive). Two additional file needed and those two needed to be placed on the same level as python files:
+
+- Cache file contains data from New York times API:
+	- Where to find: https://drive.google.com/file/d/1WZLs1B8M4EweqQU9pjYqOYSkEDgZHoPp/view?usp=sharing
+- `secret.py`: Contains API keys to get access of APIs
+
 ## How to run
-This repo contains all the file needed to run `run_flask.py`(except one large json file on my Google drive, which I will mention later). The user could direcly run `run_flask.py` once they place the json file `news_api.json` into the folder on the same level as python files. Another file that is needed is `secret.py` which contains API keys, this file should also be put on the same level as python files. 
+
+The user could direcly run `run_flask.py` once they place the json file `news_api.json` into the folder on the same level as python files. Another file that is needed is `secret.py` which contains API keys, this file should also be put on the same level as python files. 
 
 If they want to build the database from the ground, they can delete the database and cache file and run `final_project.py` first.
 - `final_project.py`.
   - This program will first preprocess the data in the csv file and generate a list of frequent words, then it will resaerch those words using the dictionary API and New York Times API, the result will be save in the cache file. 
     - **One thing to keep in mind**: The New York Times API only allows 10 request from their API per minute. But the search list contains over one thousand words. To solve this issue, I set a timer to limit the request frequency. As an result, the caching process is very slow and takes around 4 hour.
     - **I recommend the user to directly download the cache file in my Google Drive and paste it to the same level of those python files**.
-    - Here is the link: https://drive.google.com/file/d/1WZLs1B8M4EweqQU9pjYqOYSkEDgZHoPp/view?usp=sharing
+    - Here is the link: 
 - Then, run `run_flask.py`.
   - This program will run the flask and render the HTML pages so the user can play the game on a web view. 
   
@@ -36,7 +45,7 @@ If they want to build the database from the ground, they can delete the database
 - `get_data_from_news_api()`: This function will get data from New York Times API. It contains a timer to make sure it sends less than 10 request per minutes. It returns a json dictionary whose data will be later input into the database. 
 - `get_data_from_dic_api()`: This function will get data from Word Dictionary API and return a json dictionary so the data can be later input into the database.
 ### `run_flask.py`
-- `content_to_render()`: This function uses a recursive to avoid getting none result. It returns a dictionary contains both information of real news and fake news.
+- `content_to_render()`: This function uses a recursive structure to avoid getting none result. It returns a dictionary contains both information of real news and fake news.
 - `render_index()`: This function will initialize and render the first page of the game. It will also render the id of certain HTML tags so the Javascript can tell the user if they make the right choice.
 - `render_conculsion()`: This function utilizes the control loop provided by Jinjia and creates divs showing the content presented to the user during the game. 
 
