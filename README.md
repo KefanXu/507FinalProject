@@ -26,4 +26,5 @@ This repo contains all the file needed to run `run_flask.py`(except one large js
 - Then, run `run_flask.py`.
   - This program will run the flask and render the HTML pages so the user can play the game on a web view. 
 
-
+## Reference 
+[1] “Fake News.” Wikipedia, Wikimedia Foundation, 1 Dec. 2019, https://en.wikipedia.org/wiki/Fake_news.
