@@ -1,5 +1,7 @@
 # 507FinalProject
 
+## Intro
+
 Fake news refers to the news that contains misleading information. Here is a quote from wikipedia[1]：
 					
 ”Fake news (also known as junk news, pseudo-news, or hoax news) is a form of news consisting of deliberate disinformation or hoaxes spread via traditional news media (print and broadcast) or online social media. Digital news has brought back and increased the usage of fake news, or yellow journalism. The news is then often reverberated as misinformation in social media but occasionally finds its way to the mainstream media as well.“
