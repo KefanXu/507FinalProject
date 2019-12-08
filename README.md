@@ -33,7 +33,7 @@ The user could direcly run `run_flask.py` once they place the json file `news_ap
 If they want to build the database from the ground, they can delete the database and cache file and run `final_project.py` first.
 - `final_project.py`.
   - This program will first preprocess the data in the csv file and generate a list of frequent words, then it will resaerch those words using the dictionary API and New York Times API, the result will be save in the cache file. 
-    - **One thing to keep in mind**: The New York Times API only allows 10 request from their API per minute. But the search list contains over one thousand words. To solve this issue, I set a timer to limit the request frequency. As an result, the caching process is very slow and takes around 4 hour.
+    - **One thing to keep in mind**: The New York Times API only allows 10 request from their API per minute. But the search list contains over one thousand words. To solve this issue, I set a timer to limit the request frequency. As an result, the caching process is **very slow** and takes around 4 hour.
     - **I recommend the user to directly download the cache file in my Google Drive and paste it to the same level of those python files**.
 - Then, run `run_flask.py`.
   - This program will run the flask and render the HTML pages so the user can play the game on a web view. 
