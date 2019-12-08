@@ -35,6 +35,11 @@ If they want to build the database from the ground, they can delete the database
 - `csv_data_preprocessing()`: This function will reprocess the data in the csv file. It will return a list which contains frequent words used in the fake news. This list will later be used to search for real news and get description from dictionary API.
 - `get_data_from_news_api()`: This function will get data from New York Times API. It contains a timer to make sure it sends less than 10 request per minutes. It returns a json dictionary whose data will be later input into the database. 
 - `get_data_from_dic_api()`: This function will get data from Word Dictionary API and return a json dictionary so the data can be later input into the database.
+### `run_flask.py`
+- `content_to_render()`: This function uses a recursive to avoid getting none result. It returns a dictionary contains both information of real news and fake news.
+- `render_index()`: This function will initialize and render the first page of the game. It will also render the id of certain HTML tags so the Javascript can tell the user if they make the right choice.
+- `render_conculsion()`: This function utilizes the control loop provided by Jinjia and creates divs showing the content presented to the user during the game. 
+
 
 ## Reference 
 [1] “Fake News.” Wikipedia, Wikimedia Foundation, 1 Dec. 2019, https://en.wikipedia.org/wiki/Fake_news.
