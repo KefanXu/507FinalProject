@@ -1,5 +1,5 @@
 # 507FinalProject
 
-##Data Sources
+## Data Sources
 Kaggle Dataset: Getting Real about Fake News
 link: https://github.com/SophieNiu/webdesignfinal
