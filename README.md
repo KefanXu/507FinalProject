@@ -12,7 +12,7 @@ This project aims to raise peopleâ€™s awareness of fake news and improve peopleâ
 
 ## Data Sources
 - Kaggle Dataset: Getting Real about Fake News
-  - link: https://github.com/SophieNiu/webdesignfinal
+  - link: https://www.kaggle.com/mrisdal/fake-news/data
 - New York times API
   - link: https://developer.nytimes.com/apis
 - Word Dictionary by twinword API
